@@ -12,9 +12,9 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function dashboard()
     {
-        return view('cmsx::admin.index');
+        return view('cmsx::admin.dashboard');
     }
 
     public function sort(Request $request, $type)

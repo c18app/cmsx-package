@@ -10,7 +10,7 @@ class AuthController extends Controller
     public function loginProcess(Request $request)
     {
         $request->session()->put('admin_pass', $request->input('password'));
-        return redirect()->route('admin');
+        return redirect()->route('admin.dashboard');
     }
 
     public function logOut(Request $request)

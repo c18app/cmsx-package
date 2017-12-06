@@ -28,7 +28,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('password/reset', 'Cms18\CmsX\Controllers\Auth\ResetPasswordController@reset');
 
     Route::prefix('admin')->group(function() {
-        Route::get('/', 'Cms18\CmsX\Controllers\Admin\AdminController@index')->name('admin');
+        Route::redirect('/', 'admin/dashboard');
+        Route::get('dashboard', 'Cms18\CmsX\Controllers\Admin\AdminController@dashboard')->name('admin.dashboard');
 
         Route::resources([
             'pages' => 'Cms18\CmsX\Controllers\Admin\PageController',
@@ -38,12 +39,14 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('{type}/sort', 'Cms18\CmsX\Controllers\Admin\AdminController@sort')->name('admin.sort');
 
         Route::view('article', 'cmsx::admin.nocontent')->name('admin.article');
+        Route::view('content', 'cmsx::admin.nocontent')->name('admin.content');
         Route::view('comment', 'cmsx::admin.nocontent')->name('admin.comment');
         Route::view('file', 'cmsx::admin.nocontent')->name('admin.file');
         Route::view('gallery', 'cmsx::admin.nocontent')->name('admin.gallery');
         Route::view('category', 'cmsx::admin.nocontent')->name('admin.category');
         Route::view('menu', 'cmsx::admin.nocontent')->name('admin.menu');
         Route::view('user', 'cmsx::admin.nocontent')->name('admin.user');
+        Route::view('maillist', 'cmsx::admin.nocontent')->name('admin.maillist');
         Route::view('setting', 'cmsx::admin.nocontent')->name('admin.setting');
         Route::view('translate', 'cmsx::admin.nocontent')->name('admin.translate');
     });
