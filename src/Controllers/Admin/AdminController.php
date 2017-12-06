@@ -1,0 +1,29 @@
+<?php
+
+namespace Cms18\CmsX\Controllers\Admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class AdminController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        return view('cmsx::admin.index');
+    }
+
+    public function sort(Request $request, $type)
+    {
+        $ids = $request->input('ids');
+        $modelClass = 'Cms18\CmsX\Models\\' . $type;
+        $model = new $modelClass();
+        $model->sort($ids);
+        return response()->json(['status' => 'ok']);
+
+    }
+}

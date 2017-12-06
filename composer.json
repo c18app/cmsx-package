@@ -1,0 +1,32 @@
+{
+    "name": "cms18/cmsx",
+    "description": "Cms18",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michal Nosavcov",
+            "email": "mnosavcov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cms18\\CmsX\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cms18\\CmsX\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "illuminate/framework": "5.5.x"
+    }
+}
