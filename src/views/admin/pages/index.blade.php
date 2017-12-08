@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <a href="{{ route('pages.create') }}" class="btn btn-primary pull-right" role="button"><span
+            <a href="{{ route('pages.create') }}" class="btn btn-primary btn-xs pull-right" role="button"><span
                         class="fa fa-plus"></span> Page</a>
         </div>
     </div>
@@ -26,11 +26,11 @@
                                 <input type="hidden" name="del" value="{{ $v->id }}">
                                 <input type="hidden" name="hash" value="{{ sha1('hash-delete-page-id-'.$v->id) }}">
                             </form>
-                            <a href="javascript:void(0);" class="btn btn-danger"
+                            <a href="javascript:void(0);" class="btn btn-danger btn-xs"
                                                   role="button" onclick="return confirmForm('delete Page?', $('form#deletePage_{{ $v->id }}'));"><span class="fa fa-times"></span> Delete</a>
-                            <a href="{{ route('pages.edit', ['page'=>$v]) }}" class="btn btn-warning"
+                            <a href="{{ route('pages.edit', ['page'=>$v]) }}" class="btn btn-warning btn-xs"
                                role="button"><span class="fa fa-pencil"></span> Edit</a>
-                            <a href="{{ route('pages.show', ['page'=>$v]) }}" class="btn btn-info"
+                            <a href="{{ route('pages.show', ['page'=>$v]) }}" class="btn btn-info btn-xs"
                                role="button"><span class="fa fa-search"></span> Detail</a>
                         </td>
                     </tr>

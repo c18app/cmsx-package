@@ -23,9 +23,19 @@ class StoreTagPost extends FormRequest
      */
     public function rules()
     {
+        $tag = $this->route('tag');
+        $title_rules = 'required|max:255|unique:cms18_tags';
+        if($tag) {
+            $title_rules .= ',title,'.$this->route('tag')->id;
+        }
+
+        if(!$this->invisible) {
+            $this->merge(['invisible' => 0]);
+        }
+
         return [
-            'title' => 'required|max:255|unique:cms18_tags,title',
-            'invisible' => '',
+            'invisible' => 'boolean',
+            'title' => $title_rules,
         ];
     }
 }
