@@ -11,10 +11,16 @@ class Tag extends Model
     protected $table = 'cms18_tags';
 
     protected $fillable = [
-        'title'
+        'title',
+        'invisible'
     ];
 
-    public function pages() {
+    protected $attributes = [
+        'invisible' => 0
+    ];
+
+    public function pages()
+    {
         return $this->belongsToMany('Cms18\CmsX\Models\Page', 'cms18_page_tag');
     }
 }

@@ -16,6 +16,7 @@ class CreateCms18tagsTable extends Migration
         Schema::create('cms18_tags', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->boolean('invisible')->default(0);
             $table->string('title', 255)->unique();
         });
     }

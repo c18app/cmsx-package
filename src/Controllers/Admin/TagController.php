@@ -26,7 +26,11 @@ class TagController extends Controller
 
     public function store(StoreTagPost $request)
     {
-        $tag = Tag::create($request->validated());
+        $data = $request->validated();
+        if(!isset($data['invisible'])) {
+            $data['invisible'] = 0;
+        }
+        $tag = Tag::create($data);
         return redirect()->route('tags.show', ['tag' => $tag]);
     }
 
@@ -42,7 +46,12 @@ class TagController extends Controller
 
     public function update(StoreTagPost $request, Tag $tag)
     {
-        $tag->fill($request->validated())->save();
+        $data = $request->validated();
+        if(!isset($data['invisible'])) {
+            $data['invisible'] = 0;
+        }
+
+        $tag->fill($data)->save();
         return redirect()->route('tags.show', ['tag' => $tag]);
     }
 

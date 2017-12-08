@@ -24,7 +24,8 @@ class StoreTagPost extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:255|unique:cms18_tags'
+            'title' => 'required|max:255|unique:cms18_tags,title',
+            'invisible' => '',
         ];
     }
 }
