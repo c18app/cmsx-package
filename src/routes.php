@@ -33,7 +33,8 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::resources([
             'pages' => 'Cms18\CmsX\Controllers\Admin\PageController',
-            'tags' => 'Cms18\CmsX\Controllers\Admin\TagController'
+            'tags' => 'Cms18\CmsX\Controllers\Admin\TagController',
+            'settings' => 'Cms18\CmsX\Controllers\Admin\SettingController'
         ]);
 
         Route::post('{type}/sort', 'Cms18\CmsX\Controllers\Admin\AdminController@sort')->name('admin.sort');
@@ -47,7 +48,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::view('menu', 'cmsx::admin.nocontent')->name('admin.menu');
         Route::view('user', 'cmsx::admin.nocontent')->name('admin.user');
         Route::view('maillist', 'cmsx::admin.nocontent')->name('admin.maillist');
-        Route::view('setting', 'cmsx::admin.nocontent')->name('admin.setting');
         Route::view('translate', 'cmsx::admin.nocontent')->name('admin.translate');
     });
 

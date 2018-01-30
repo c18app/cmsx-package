@@ -32,8 +32,8 @@
     <li class="{{ Request()->route()->named('admin.maillist') ? ' active' : '' }}">
         <a href="{{ route('admin.maillist') }}" class="text-muted"><span class="far fa-envelope"></span>&nbsp;&nbsp;MailList</a>
     </li>
-    <li class="{{ Request()->route()->named('admin.setting') ? ' active' : '' }}">
-        <a href="{{ route('admin.setting') }}" class="text-muted"><span class="fas fa-cog"></span>&nbsp;&nbsp;Settings</a>
+    <li class="{{ Request()->route()->named('settings.*') ? ' active' : '' }}">
+        <a href="{{ route('settings.index') }}"><span class="fas fa-cog"></span>&nbsp;&nbsp;Settings</a>
     </li>
     <li class="{{ Request()->route()->named('admin.translate') ? ' active' : '' }}">
         <a href="{{ route('admin.translate') }}" class="text-muted"><span class="fas fa-globe"></span>&nbsp;&nbsp;Translates</a>

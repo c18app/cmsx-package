@@ -12,6 +12,12 @@
     <script src="/js/app.js"></script>
 
     @include('cmsx::css.frontendstyle')
+    <?php
+        $header_html = \Cms18\CmsX\Models\Setting::where('title', 'html_header')->first();
+    ?>
+    @isset($header_html)
+        {!! $header_html->content !!}
+    @endisset
 </head>
 <body class="frontend">
 @include('cmsx::frontend.menu.top')
