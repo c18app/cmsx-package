@@ -7,7 +7,7 @@
 
     <title>Admin</title>
 
-    <script src="https://use.fontawesome.com/d63a82012b.js"></script>
+    <link rel="stylesheet" href="http://cdn.c18h27no3.cz/fontawesome/5.0.6/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
 
