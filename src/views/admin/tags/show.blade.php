@@ -7,7 +7,7 @@
                 <a href="{{ route('tags.index') }}" class="btn btn-link btn-xs" role="button"><span
                             class="far fa-arrow-circle-left"></span> Back</a>
                 <a href="{{ route('tags.edit', ['tag'=>$tag]) }}" class="btn btn-warning btn-xs"
-                   role="button"><span class="far fa-pencil-alt"></span> Edit</a>
+                   role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
                             <td>{{ $v->title }}</td>
                             <td class="text-right">
                                 <a href="{{ route('pages.edit', ['page'=>$v]) }}" class="btn btn-warning btn-xs"
-                                   role="button"><span class="far fa-pencil-alt"></span> Edit</a>
+                                   role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
                                 <a href="{{ route('pages.show', ['page'=>$v]) }}" class="btn btn-info btn-xs"
                                    role="button"><span class="fas fa-search"></span> Detail</a>
                             </td>

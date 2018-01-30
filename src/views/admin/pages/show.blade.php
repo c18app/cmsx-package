@@ -7,7 +7,7 @@
                 <a href="{{ route('pages.index') }}" class="btn btn-link btn-xs" role="button"><span
                             class="far fa-arrow-circle-left"></span> Back</a>
                 <a href="{{ route('pages.edit', ['page'=>$page]) }}" class="btn btn-warning btn-xs"
-                   role="button"><span class="far fa-pencil-alt"></span> Edit</a>
+                   role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
             </div>
         </div>
     </div>

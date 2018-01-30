@@ -34,7 +34,7 @@
                                     Delete</a>
                             @endif
                             <a href="{{ route('tags.edit', ['tag'=>$v]) }}" class="btn btn-warning btn-xs"
-                               role="button"><span class="far fa-pencil-alt"></span> Edit</a>
+                               role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
                             <a href="{{ route('tags.show', ['tag'=>$v]) }}" class="btn btn-info btn-xs"
                                role="button"><span class="fas fa-search"></span> Detail</a>
                         </td>

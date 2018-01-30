@@ -29,7 +29,7 @@
                             <a href="javascript:void(0);" class="btn btn-danger btn-xs"
                                                   role="button" onclick="return confirmForm('delete Page?', $('form#deletePage_{{ $v->id }}'));"><span class="fas fa-times"></span> Delete</a>
                             <a href="{{ route('pages.edit', ['page'=>$v]) }}" class="btn btn-warning btn-xs"
-                               role="button"><span class="far fa-pencil-alt"></span> Edit</a>
+                               role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
                             <a href="{{ route('pages.show', ['page'=>$v]) }}" class="btn btn-info btn-xs"
                                role="button"><span class="fas fa-search"></span> Detail</a>
                         </td>
