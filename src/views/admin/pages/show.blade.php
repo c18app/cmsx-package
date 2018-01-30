@@ -5,9 +5,9 @@
         <div class="col-lg-12">
             <div class="pull-right">
                 <a href="{{ route('pages.index') }}" class="btn btn-link btn-xs" role="button"><span
-                            class="fa fa-arrow-circle-left"></span> Back</a>
+                            class="far fa-arrow-circle-left"></span> Back</a>
                 <a href="{{ route('pages.edit', ['page'=>$page]) }}" class="btn btn-warning btn-xs"
-                   role="button"><span class="fa fa-pencil"></span> Edit</a>
+                   role="button"><span class="far fa-pencil-alt"></span> Edit</a>
             </div>
         </div>
     </div>

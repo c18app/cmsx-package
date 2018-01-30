@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarAdminTop">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="{{ route('homepage') }}"><span class="fa fa-home"></span> Homepage</a>
+                    <a href="{{ route('homepage') }}"><span class="fas fa-home"></span> Homepage</a>
                 </li>
             </ul>
 

@@ -25,7 +25,7 @@
                         <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.dashboard') }}"><span class="fa fa-cog"></span></a>
+                        <a class="nav-link" href="{{ route('admin.dashboard') }}"><span class="fas fa-cog"></span></a>
                     </li>
                 @endauth
                 @guest

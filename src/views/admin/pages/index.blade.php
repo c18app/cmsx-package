@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             <a href="{{ route('pages.create') }}" class="btn btn-primary btn-xs pull-right" role="button"><span
-                        class="fa fa-plus"></span> Page</a>
+                        class="fas fa-plus"></span> Page</a>
         </div>
     </div>
     <div class="clearfix">&nbsp;</div>
@@ -27,11 +27,11 @@
                                 <input type="hidden" name="hash" value="{{ sha1('hash-delete-page-id-'.$v->id) }}">
                             </form>
                             <a href="javascript:void(0);" class="btn btn-danger btn-xs"
-                                                  role="button" onclick="return confirmForm('delete Page?', $('form#deletePage_{{ $v->id }}'));"><span class="fa fa-times"></span> Delete</a>
+                                                  role="button" onclick="return confirmForm('delete Page?', $('form#deletePage_{{ $v->id }}'));"><span class="fas fa-times"></span> Delete</a>
                             <a href="{{ route('pages.edit', ['page'=>$v]) }}" class="btn btn-warning btn-xs"
-                               role="button"><span class="fa fa-pencil"></span> Edit</a>
+                               role="button"><span class="far fa-pencil-alt"></span> Edit</a>
                             <a href="{{ route('pages.show', ['page'=>$v]) }}" class="btn btn-info btn-xs"
-                               role="button"><span class="fa fa-search"></span> Detail</a>
+                               role="button"><span class="fas fa-search"></span> Detail</a>
                         </td>
                     </tr>
                 @endforeach
