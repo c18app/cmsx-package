@@ -7,7 +7,7 @@
 
     <title>Kurz programování webu @yield('title', '')</title>
 
-    <link rel="stylesheet" href="http://cdn.c18h27no3.cz/fontawesome/5.0.6/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
 
