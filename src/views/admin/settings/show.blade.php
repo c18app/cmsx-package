@@ -4,9 +4,9 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="pull-right">
-                <a href="{{ route('settings.index') }}" class="btn btn-link btn-xs" role="button"><span
+                <a href="{{ route('translates.index') }}" class="btn btn-link btn-xs" role="button"><span
                             class="far fa-arrow-alt-circle-left"></span> Back</a>
-                <a href="{{ route('settings.edit', ['setting'=>$setting]) }}" class="btn btn-warning btn-xs"
+                <a href="{{ route('translates.edit', ['translate'=>$translate]) }}" class="btn btn-warning btn-xs"
                    role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
             </div>
         </div>
@@ -23,11 +23,11 @@
                 </tr>
                 <tr>
                     <td class="active">title:</td>
-                    <td>{{ $setting->title }}</td>
+                    <td>{{ $translate->title }}</td>
                 </tr>
                 <tr>
                     <td class="active">content:</td>
-                    <td>{{ $setting->content }}</td>
+                    <td>{{ $translate->content }}</td>
                 </tr>
             </table>
         </div>

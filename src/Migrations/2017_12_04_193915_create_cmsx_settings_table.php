@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use C18app\CmsX\Migrations\Base as Migration;
 
-class CreateCmsxSettingsTable extends Migration
+class CreateCmsxTranslatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCmsxSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create($this->table_prefix . 'settings', function (Blueprint $table) {
+        Schema::create($this->table_prefix . 'translates', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('title', 255)->unique();
@@ -28,6 +28,6 @@ class CreateCmsxSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists($this->table_prefix . 'settings');
+        Schema::dropIfExists($this->table_prefix . 'translates');
     }
 }

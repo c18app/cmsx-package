@@ -5,11 +5,11 @@
     @endisset
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $setting->title) }}">
+        <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $translate->title) }}">
     </div>
     <div class="form-group">
         <label for="content">Content</label>
-        <textarea class="form-control" id="content" name="content">{{ old('content', $setting->content) }}</textarea>
+        <textarea class="form-control" id="content" name="content">{{ old('content', $translate->content) }}</textarea>
     </div>
 
     <div class="form-group">

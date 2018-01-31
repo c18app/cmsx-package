@@ -4,7 +4,7 @@ namespace C18app\CmsX\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreSettingPost extends FormRequest
+class StoreTranslatePost extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,10 @@ class StoreSettingPost extends FormRequest
      */
     public function rules()
     {
-        $setting = $this->route('setting');
-        $title_rules = 'required|max:255|unique:' . \Config::get('cmsx.table_prefix') . 'settings';
-        if ($setting) {
-            $title_rules .= ',title,' . $this->route('setting')->id;
+        $translate = $this->route('translate');
+        $title_rules = 'required|max:255|unique:' . \Config::get('cmsx.table_prefix') . 'translates';
+        if ($translate) {
+            $title_rules .= ',title,' . $this->route('translate')->id;
         }
 
         return [
