@@ -2,17 +2,10 @@
 
 namespace C18app\CmsX\Models;
 
-use C18app\CmsX\Traits\PrefixModelTableName;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use C18app\CmsX\Traits\Sort;
+use C18app\CmsX\Models\Base as Model;
 
 class Tag extends Model
 {
-    use PrefixModelTableName;
-
-    protected $table = 'cms18x_tags';
-
     protected $fillable = [
         'title',
         'invisible'
@@ -24,6 +17,6 @@ class Tag extends Model
 
     public function pages()
     {
-        return $this->belongsToMany('C18app\CmsX\Models\Page', \Config::get('cmsx.table_prefix') . 'page_tag');
+        return $this->belongsToMany('C18app\CmsX\Models\Page', $this->table_prefix . 'page_tag');
     }
 }

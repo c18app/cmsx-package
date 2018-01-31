@@ -2,8 +2,7 @@
 
 namespace C18app\CmsX\Models;
 
-use C18app\CmsX\Traits\PrefixModelTableName;
-use Illuminate\Database\Eloquent\Model;
+use C18app\CmsX\Models\Base as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use C18app\CmsX\Traits\Sort;
 
@@ -11,9 +10,6 @@ class Page extends Model
 {
     use SoftDeletes;
     use Sort;
-    use PrefixModelTableName;
-
-    protected $table = 'cms18x_pages';
 
     protected $fillable = [
         'title',
@@ -31,6 +27,6 @@ class Page extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('C18app\CmsX\Models\Tag', \Config::get('cmsx.table_prefix') . 'page_tag');
+        return $this->belongsToMany('C18app\CmsX\Models\Tag', $this->table_prefix . 'page_tag');
     }
 }

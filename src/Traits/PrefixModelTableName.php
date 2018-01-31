@@ -2,6 +2,8 @@
 
 namespace C18app\CmsX\Traits;
 
+use Illuminate\Support\Str;
+
 trait PrefixModelTableName
 {
     public function getTable()
