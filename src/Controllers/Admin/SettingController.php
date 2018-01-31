@@ -1,10 +1,10 @@
 <?php
 
-namespace Cms18\CmsX\Controllers\Admin;
+namespace C18app\CmsX\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Cms18\CmsX\Models\Setting;
-use Cms18\CmsX\Requests\StoreSettingPost;
+use C18app\CmsX\Models\Setting;
+use C18app\CmsX\Requests\StoreSettingPost;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller

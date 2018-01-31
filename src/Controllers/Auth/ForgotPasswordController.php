@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\Cmsx\Controllers\Auth;
+namespace C18app\Cmsx\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;

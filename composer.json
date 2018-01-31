@@ -1,6 +1,6 @@
 {
-    "name": "cms18/cmsx",
-    "description": "Cms18",
+    "name": "c18app/cmsx",
+    "description": "CmsX",
     "keywords": [],
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cms18\\CmsX\\": "src/"
+            "C18app\\CmsX\\": "src/"
         }
     },
     "minimum-stability": "dev",
@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Cms18\\CmsX\\ServiceProvider"
+                "C18app\\CmsX\\ServiceProvider"
             ]
         }
     },

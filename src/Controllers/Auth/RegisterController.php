@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\Cmsx\Controllers\Auth;
+namespace C18app\Cmsx\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;

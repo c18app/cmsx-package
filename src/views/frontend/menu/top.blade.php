@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarAdminTop">
             <ul class="nav navbar-nav">
                 <li class="{{ Request()->route()->named('pages.index') ? ' active' : '' }}">
-                    <a href="{{ Cms18\CmsX\Models\Page::first()->getUrl() }}">{{ Cms18\CmsX\Models\Page::first()->title }}</a>
+                    <a href="{{ C18app\CmsX\Models\Page::first()->getUrl() }}">{{ C18app\CmsX\Models\Page::first()->title }}</a>
                 </li>
             </ul>
 

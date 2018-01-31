@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\CmsX\Requests;
+namespace C18app\CmsX\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,7 +24,7 @@ class StoreSettingPost extends FormRequest
     public function rules()
     {
         $setting = $this->route('setting');
-        $title_rules = 'required|max:255|unique:cms18_settings';
+        $title_rules = 'required|max:255|unique:cmsx_settings';
         if($setting) {
             $title_rules .= ',title,'.$this->route('setting')->id;
         }

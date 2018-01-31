@@ -1,17 +1,17 @@
 <?php
 
-namespace Cms18\CmsX\Models;
+namespace C18app\CmsX\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Cms18\CmsX\Traits\Sort;
+use C18app\CmsX\Traits\Sort;
 
 class Page extends Model
 {
     use SoftDeletes;
     use Sort;
 
-    protected $table = 'cms18_pages';
+    protected $table = 'cmsx_pages';
 
     protected $fillable = [
         'title',
@@ -28,6 +28,6 @@ class Page extends Model
     }
 
     public function tags() {
-        return $this->belongsToMany('Cms18\CmsX\Models\Tag', 'cms18_page_tag');
+        return $this->belongsToMany('C18app\CmsX\Models\Tag', 'cmsx_page_tag');
     }
 }

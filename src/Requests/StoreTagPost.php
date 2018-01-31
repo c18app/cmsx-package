@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\CmsX\Requests;
+namespace C18app\CmsX\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,7 +24,7 @@ class StoreTagPost extends FormRequest
     public function rules()
     {
         $tag = $this->route('tag');
-        $title_rules = 'required|max:255|unique:cms18_tags';
+        $title_rules = 'required|max:255|unique:cmsx_tags';
         if($tag) {
             $title_rules .= ',title,'.$this->route('tag')->id;
         }

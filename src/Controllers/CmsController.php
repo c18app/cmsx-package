@@ -1,10 +1,10 @@
 <?php
 
-namespace Cms18\CmsX\Controllers;
+namespace C18app\CmsX\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Cms18\CmsX\Models\Page;
+use C18app\CmsX\Models\Page;
 
 class CmsController extends Controller
 {

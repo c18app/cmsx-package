@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCms18PagesTable extends Migration
+class CreateCmsxMenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateCms18PagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cms18_pages', function (Blueprint $table) {
+        Schema::create('cmsx_menus', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->softDeletes();
             $table->string('title', 255);
-            $table->longText('content')->nullable();
             $table->integer('order');
         });
     }
@@ -30,6 +29,6 @@ class CreateCms18PagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cms18_pages');
+        Schema::dropIfExists('cmsx_menus');
     }
 }

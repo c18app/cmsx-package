@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCms18settingsTable extends Migration
+class CreateCmsxPagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateCms18settingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cms18_settings', function (Blueprint $table) {
+        Schema::create('cmsx_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('title', 255)->unique();
-            $table->text('content');
+            $table->softDeletes();
+            $table->string('title', 255);
+            $table->longText('content')->nullable();
+            $table->integer('order');
         });
     }
 
@@ -28,6 +30,6 @@ class CreateCms18settingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cms18_settings');
+        Schema::dropIfExists('cmsx_pages');
     }
 }

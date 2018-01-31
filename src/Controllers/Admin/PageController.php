@@ -1,11 +1,11 @@
 <?php
 
-namespace Cms18\CmsX\Controllers\Admin;
+namespace C18app\CmsX\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Cms18\CmsX\Models\Page;
-use Cms18\CmsX\Models\Tag;
-use Cms18\CmsX\Requests\StorePagePost;
+use C18app\CmsX\Models\Page;
+use C18app\CmsX\Models\Tag;
+use C18app\CmsX\Requests\StorePagePost;
 use Illuminate\Http\Request;
 
 class PageController extends Controller

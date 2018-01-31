@@ -15,29 +15,29 @@ Route::group(['middleware' => ['web']], function () {
         return $response;
     })->name('storage');
 
-    Route::get('login', 'Cms18\CmsX\Controllers\Auth\LoginController@showLoginForm')->name('login');
-    Route::post('login', 'Cms18\CmsX\Controllers\Auth\LoginController@login');
-    Route::get('logout', 'Cms18\CmsX\Controllers\Auth\LoginController@logout')->name('logout');
+    Route::get('login', 'C18app\CmsX\Controllers\Auth\LoginController@showLoginForm')->name('login');
+    Route::post('login', 'C18app\CmsX\Controllers\Auth\LoginController@login');
+    Route::get('logout', 'C18app\CmsX\Controllers\Auth\LoginController@logout')->name('logout');
 
-    Route::get('register', 'Cms18\CmsX\Controllers\Auth\RegisterController@showRegistrationForm')->name('register');
-    Route::post('register', 'Cms18\CmsX\Controllers\Auth\RegisterController@register');
+    Route::get('register', 'C18app\CmsX\Controllers\Auth\RegisterController@showRegistrationForm')->name('register');
+    Route::post('register', 'C18app\CmsX\Controllers\Auth\RegisterController@register');
 
-    Route::get('password/reset', 'Cms18\CmsX\Controllers\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-    Route::post('password/email', 'Cms18\CmsX\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-    Route::get('password/reset/{token}', 'Cms18\CmsX\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('password/reset', 'Cms18\CmsX\Controllers\Auth\ResetPasswordController@reset');
+    Route::get('password/reset', 'C18app\CmsX\Controllers\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::post('password/email', 'C18app\CmsX\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('password/reset/{token}', 'C18app\CmsX\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
+    Route::post('password/reset', 'C18app\CmsX\Controllers\Auth\ResetPasswordController@reset');
 
     Route::prefix('admin')->group(function() {
         Route::redirect('/', 'admin/dashboard');
-        Route::get('dashboard', 'Cms18\CmsX\Controllers\Admin\AdminController@dashboard')->name('admin.dashboard');
+        Route::get('dashboard', 'C18app\CmsX\Controllers\Admin\AdminController@dashboard')->name('admin.dashboard');
 
         Route::resources([
-            'pages' => 'Cms18\CmsX\Controllers\Admin\PageController',
-            'tags' => 'Cms18\CmsX\Controllers\Admin\TagController',
-            'settings' => 'Cms18\CmsX\Controllers\Admin\SettingController'
+            'pages' => 'C18app\CmsX\Controllers\Admin\PageController',
+            'tags' => 'C18app\CmsX\Controllers\Admin\TagController',
+            'settings' => 'C18app\CmsX\Controllers\Admin\SettingController'
         ]);
 
-        Route::post('{type}/sort', 'Cms18\CmsX\Controllers\Admin\AdminController@sort')->name('admin.sort');
+        Route::post('{type}/sort', 'C18app\CmsX\Controllers\Admin\AdminController@sort')->name('admin.sort');
 
         Route::view('article', 'cmsx::admin.nocontent')->name('admin.article');
         Route::view('content', 'cmsx::admin.nocontent')->name('admin.content');
@@ -51,7 +51,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::view('translate', 'cmsx::admin.nocontent')->name('admin.translate');
     });
 
-    Route::get('page/{id}-{slug}', 'Cms18\CmsX\Controllers\CmsController@page')->name('cms.page');
+    Route::get('page/{id}-{slug}', 'C18app\CmsX\Controllers\CmsController@page')->name('cms.page');
 
-    Route::get('/', 'Cms18\CmsX\Controllers\CmsController@index')->name('homepage');
+    Route::get('/', 'C18app\CmsX\Controllers\CmsController@index')->name('homepage');
 });

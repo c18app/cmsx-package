@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\CmsX\Requests;
+namespace C18app\CmsX\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

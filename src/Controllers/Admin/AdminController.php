@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\CmsX\Controllers\Admin;
+namespace C18app\CmsX\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,7 +20,7 @@ class AdminController extends Controller
     public function sort(Request $request, $type)
     {
         $ids = $request->input('ids');
-        $modelClass = 'Cms18\CmsX\Models\\' . $type;
+        $modelClass = 'C18app\CmsX\Models\\' . $type;
         $model = new $modelClass();
         $model->sort($ids);
         return response()->json(['status' => 'ok']);

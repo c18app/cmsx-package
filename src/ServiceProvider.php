@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms18\CmsX;
+namespace C18app\CmsX;
 
 use Illuminate\Support\ServiceProvider as SP;
 use Illuminate\Routing\Router;
