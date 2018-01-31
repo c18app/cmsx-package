@@ -24,7 +24,7 @@ class StoreTagPost extends FormRequest
     public function rules()
     {
         $tag = $this->route('tag');
-        $title_rules = 'required|max:255|unique:cmsx_tags';
+        $title_rules = 'required|max:255|unique:cms18x_tags';
         if($tag) {
             $title_rules .= ',title,'.$this->route('tag')->id;
         }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCmsxPageTagTable extends Migration
+class CreateCms18xPageTagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateCmsxPageTagTable extends Migration
      */
     public function up()
     {
-        Schema::create('cmsx_page_tag', function (Blueprint $table) {
+        Schema::create('cms18x_page_tag', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('page_id')->unsigned();
             $table->integer('tag_id')->unsigned();
 
-            $table->foreign('page_id')->references('id')->on('cmsx_pages');
-            $table->foreign('tag_id')->references('id')->on('cmsx_tags');
+            $table->foreign('page_id')->references('id')->on('cms18x_pages');
+            $table->foreign('tag_id')->references('id')->on('cms18x_tags');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateCmsxPageTagTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cmsx_page_tag');
+        Schema::dropIfExists('cms18x_page_tag');
     }
 }

@@ -8,7 +8,7 @@ use C18app\CmsX\Traits\Sort;
 
 class Setting extends Model
 {
-    protected $table = 'cmsx_settings';
+    protected $table = 'cms18x_settings';
 
     protected $fillable = [
         'title',

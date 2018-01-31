@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCmsxTagsTable extends Migration
+class CreateCms18xPagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateCmsxTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cmsx_tags', function (Blueprint $table) {
+        Schema::create('cms18x_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->boolean('invisible')->default(0);
-            $table->string('title', 255)->unique();
+            $table->softDeletes();
+            $table->string('title', 255);
+            $table->longText('content')->nullable();
+            $table->integer('order');
         });
     }
 
@@ -28,6 +30,6 @@ class CreateCmsxTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cmsx_tags');
+        Schema::dropIfExists('cms18x_pages');
     }
 }

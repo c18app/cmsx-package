@@ -11,7 +11,7 @@ class Page extends Model
     use SoftDeletes;
     use Sort;
 
-    protected $table = 'cmsx_pages';
+    protected $table = 'cms18x_pages';
 
     protected $fillable = [
         'title',
@@ -28,6 +28,6 @@ class Page extends Model
     }
 
     public function tags() {
-        return $this->belongsToMany('C18app\CmsX\Models\Tag', 'cmsx_page_tag');
+        return $this->belongsToMany('C18app\CmsX\Models\Tag', 'cms18x_page_tag');
     }
 }

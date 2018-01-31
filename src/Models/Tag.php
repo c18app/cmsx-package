@@ -8,7 +8,7 @@ use C18app\CmsX\Traits\Sort;
 
 class Tag extends Model
 {
-    protected $table = 'cmsx_tags';
+    protected $table = 'cms18x_tags';
 
     protected $fillable = [
         'title',
@@ -21,6 +21,6 @@ class Tag extends Model
 
     public function pages()
     {
-        return $this->belongsToMany('C18app\CmsX\Models\Page', 'cmsx_page_tag');
+        return $this->belongsToMany('C18app\CmsX\Models\Page', 'cms18x_page_tag');
     }
 }
