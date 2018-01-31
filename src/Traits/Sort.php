@@ -1,6 +1,6 @@
 <?php
 
-namespace C18app\CmsX\Traits;
+namespace C18app\Cmsx\Traits;
 
 trait Sort
 {

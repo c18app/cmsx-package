@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "C18app\\CmsX\\": "src/"
+            "C18app\\Cmsx\\": "src/"
         }
     },
     "minimum-stability": "dev",
@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "C18app\\CmsX\\ServiceProvider"
+                "C18app\\Cmsx\\ServiceProvider"
             ]
         }
     },

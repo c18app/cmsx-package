@@ -1,6 +1,6 @@
 <?php
 
-namespace C18app\CmsX\Migrations;
+namespace C18app\Cmsx\Migrations;
 
 use Illuminate\Database\Migrations\Migration;
 

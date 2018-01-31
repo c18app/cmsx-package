@@ -1,8 +1,8 @@
 <?php
 
-namespace C18app\CmsX\Models;
+namespace C18app\Cmsx\Models;
 
-use C18app\CmsX\Models\Base as Model;
+use C18app\Cmsx\Models\Base as Model;
 
 class Tag extends Model
 {
@@ -17,6 +17,6 @@ class Tag extends Model
 
     public function pages()
     {
-        return $this->belongsToMany('C18app\CmsX\Models\Page', $this->table_prefix . 'page_tag');
+        return $this->belongsToMany('C18app\Cmsx\Models\Page', $this->table_prefix . 'page_tag');
     }
 }

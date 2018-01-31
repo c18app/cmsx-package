@@ -25,7 +25,7 @@
 
 <script type="application/javascript">
     $('.input-tags').selectize({
-        options: [@foreach(\C18app\CmsX\Models\Tag::orderBy('title')->get() as $item) {value: "{{ $item->title }}", text: "{{ $item->title }}"}, @endforeach],
+        options: [@foreach(\C18app\Cmsx\Models\Tag::orderBy('title')->get() as $item) {value: "{{ $item->title }}", text: "{{ $item->title }}"}, @endforeach],
         plugins: ['remove_button'],
         persist: false,
         create: true,

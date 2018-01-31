@@ -1,10 +1,10 @@
 <?php
 
-namespace C18app\CmsX\Controllers\Admin;
+namespace C18app\Cmsx\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use C18app\CmsX\Models\Tag;
-use C18app\CmsX\Requests\StoreTagPost;
+use C18app\Cmsx\Models\Tag;
+use C18app\Cmsx\Requests\StoreTagPost;
 use Illuminate\Http\Request;
 
 class TagController extends Controller

@@ -1,8 +1,8 @@
 <?php
 
-namespace C18app\CmsX\Models;
+namespace C18app\Cmsx\Models;
 
-use C18app\CmsX\Models\Base as Model;
+use C18app\Cmsx\Models\Base as Model;
 
 class Translate extends Model
 {

@@ -13,7 +13,7 @@
 
     @include('cmsx::css.frontendstyle')
     <?php
-        $header_html = \C18app\CmsX\Models\Translate::where('title', 'html_header')->first();
+        $header_html = \C18app\Cmsx\Models\Translate::where('title', 'html_header')->first();
     ?>
     @isset($header_html)
         {!! $header_html->content !!}

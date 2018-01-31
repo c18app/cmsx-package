@@ -1,6 +1,6 @@
 <?php
 
-namespace C18app\CmsX\Controllers;
+namespace C18app\Cmsx\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

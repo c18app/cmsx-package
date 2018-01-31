@@ -1,10 +1,10 @@
 <?php
 
-namespace C18app\CmsX\Models;
+namespace C18app\Cmsx\Models;
 
-use C18app\CmsX\Models\Base as Model;
+use C18app\Cmsx\Models\Base as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use C18app\CmsX\Traits\Sort;
+use C18app\Cmsx\Traits\Sort;
 
 class Page extends Model
 {
@@ -27,6 +27,6 @@ class Page extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('C18app\CmsX\Models\Tag', $this->table_prefix . 'page_tag');
+        return $this->belongsToMany('C18app\Cmsx\Models\Tag', $this->table_prefix . 'page_tag');
     }
 }

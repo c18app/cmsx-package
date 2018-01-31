@@ -1,9 +1,9 @@
 <?php
 
-namespace C18app\CmsX\Models;
+namespace C18app\Cmsx\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use C18app\CmsX\Traits\PrefixModelTableName;
+use C18app\Cmsx\Traits\PrefixModelTableName;
 
 class Base extends Model
 {

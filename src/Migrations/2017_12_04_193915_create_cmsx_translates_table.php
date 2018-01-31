@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use C18app\CmsX\Migrations\Base as Migration;
+use C18app\Cmsx\Migrations\Base as Migration;
 
 class CreateCmsxTranslatesTable extends Migration
 {

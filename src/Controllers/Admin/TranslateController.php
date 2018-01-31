@@ -1,10 +1,10 @@
 <?php
 
-namespace C18app\CmsX\Controllers\Admin;
+namespace C18app\Cmsx\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use C18app\CmsX\Models\Translate;
-use C18app\CmsX\Requests\StoreTranslatePost;
+use C18app\Cmsx\Models\Translate;
+use C18app\Cmsx\Requests\StoreTranslatePost;
 use Illuminate\Http\Request;
 
 class TranslateController extends Controller
