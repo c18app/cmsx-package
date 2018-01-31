@@ -24,9 +24,9 @@ class StoreSettingPost extends FormRequest
     public function rules()
     {
         $setting = $this->route('setting');
-        $title_rules = 'required|max:255|unique:cms18x_settings';
-        if($setting) {
-            $title_rules .= ',title,'.$this->route('setting')->id;
+        $title_rules = 'required|max:255|unique:' . \Config::get('cmsx.table_prefix') . 'settings';
+        if ($setting) {
+            $title_rules .= ',title,' . $this->route('setting')->id;
         }
 
         return [

@@ -2,7 +2,7 @@
 
 namespace C18app\CmsX\Traits;
 
-trait sort
+trait Sort
 {
     public function sort($idsOrder = null)
     {

@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
+use C18app\CmsX\Migrations\Base as Migration;
 
-class CreateCms18xSettingsTable extends Migration
+class CreateCmsxSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCms18xSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cms18x_settings', function (Blueprint $table) {
+        Schema::create($this->table_prefix . 'settings', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('title', 255)->unique();
@@ -28,6 +28,6 @@ class CreateCms18xSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cms18x_settings');
+        Schema::dropIfExists($this->table_prefix . 'settings');
     }
 }

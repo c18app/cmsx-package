@@ -24,12 +24,12 @@ class StoreTagPost extends FormRequest
     public function rules()
     {
         $tag = $this->route('tag');
-        $title_rules = 'required|max:255|unique:cms18x_tags';
-        if($tag) {
-            $title_rules .= ',title,'.$this->route('tag')->id;
+        $title_rules = 'required|max:255|unique:' . \Config::get('cmsx.table_prefix') . 'tags';
+        if ($tag) {
+            $title_rules .= ',title,' . $this->route('tag')->id;
         }
 
-        if(!$this->invisible) {
+        if (!$this->invisible) {
             $this->merge(['invisible' => 0]);
         }
 
