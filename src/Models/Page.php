@@ -27,6 +27,6 @@ class Page extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('C18app\Cmsx\Models\Tag', $this->table_prefix . 'page_tag');
+        return $this->morphToMany('C18app\Cmsx\Models\Tag', 'taggable', $this->table_prefix . 'taggables');
     }
 }

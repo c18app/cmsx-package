@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'table_prefix' => 'cms18x_'
+    'table_prefix' => 'c18x_'
 ];

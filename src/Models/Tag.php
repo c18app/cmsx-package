@@ -17,6 +17,6 @@ class Tag extends Model
 
     public function pages()
     {
-        return $this->belongsToMany('C18app\Cmsx\Models\Page', $this->table_prefix . 'page_tag');
+        return $this->morphedByMany('C18app\Cmsx\Models\Page', 'taggable', $this->table_prefix . 'taggables');
     }
 }
