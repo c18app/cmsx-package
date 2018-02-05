@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
 
-    @include('cmsx::css.authstyle')
+    <link rel="stylesheet" href="/vendor/c18app/cmsx/css/auth/app.css">
 </head>
 <body class="auth">
 <div class="container">

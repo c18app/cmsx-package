@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/vendor/c18app/cmsx/jquery/ui/1.12.1/themes/base/jquery-ui.min.css">
     <script src="/vendor/c18app/cmsx/jquery/ui/1.12.1/jquery-ui.min.js"></script>
 
-    @include('cmsx::css.adminstyle')
+    <link rel="stylesheet" href="/vendor/c18app/cmsx/css/backend/app.css">
 </head>
 <body class="admin">
 @include('cmsx::admin.menu.top')

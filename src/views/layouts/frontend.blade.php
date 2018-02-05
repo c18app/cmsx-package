@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
 
-    @include('cmsx::css.frontendstyle')
+    <link rel="stylesheet" href="/vendor/c18app/cmsx/css/frontend/app.css">
     <?php
         $header_html = \C18app\Cmsx\Models\Translate::where('title', 'html_header')->first();
     ?>
