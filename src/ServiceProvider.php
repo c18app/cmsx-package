@@ -25,6 +25,8 @@ class ServiceProvider extends SP
 
         $this->publishes([
             __DIR__.'/assets' => public_path('vendor/c18app/cmsx'),
+            __DIR__.'/views' => resource_path('views/vendor/cmsx'),
+            __DIR__.'/config/cmsx.php' => config_path('cmsx.php'),
         ], 'c18app_cmsx');
     }
 

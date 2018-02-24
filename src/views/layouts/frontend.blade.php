@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Kurz programování webu @yield('title', '')</title>
+    <title>{{ config('cmsx.app.name') }} @yield('title', '')</title>
 
     <link href="/vendor/c18app/cmsx/fontawesome/5.0.6/css/fontawesome-all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
