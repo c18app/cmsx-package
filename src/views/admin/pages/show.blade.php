@@ -12,7 +12,11 @@
         </div>
     </div>
 
-    <div class="clearfix">&nbsp;</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <a href="{{ $page->getUrl() }}" target="_blank">{{ $page->getUrl() }}</a>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-lg-12">
