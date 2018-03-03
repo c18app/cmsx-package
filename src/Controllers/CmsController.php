@@ -5,6 +5,7 @@ namespace C18app\Cmsx\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use C18app\Cmsx\Models\Page;
+use C18app\Cmsx\Models\Article;
 
 class CmsController extends Controller
 {
@@ -16,5 +17,11 @@ class CmsController extends Controller
     {
         $page = Page::findOrFail($id);
         return view('cmsx::cms.page', ['page' => $page]);
+    }
+
+    public function article($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('cmsx::cms.article', ['article' => $article]);
     }
 }

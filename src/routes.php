@@ -34,12 +34,13 @@ Route::group(['middleware' => ['web']], function () {
         Route::resources([
             'pages' => 'C18app\Cmsx\Controllers\Admin\PageController',
             'tags' => 'C18app\Cmsx\Controllers\Admin\TagController',
-            'translates' => 'C18app\Cmsx\Controllers\Admin\TranslateController'
+            'translates' => 'C18app\Cmsx\Controllers\Admin\TranslateController',
+            'articles' => 'C18app\Cmsx\Controllers\Admin\ArticleController'
         ]);
 
         Route::post('{type}/sort', 'C18app\Cmsx\Controllers\Admin\AdminController@sort')->name('admin.sort');
 
-        Route::view('article', 'cmsx::admin.nocontent')->name('admin.article');
+        Route::view('tweet', 'cmsx::admin.nocontent')->name('admin.tweets');
         Route::view('content', 'cmsx::admin.nocontent')->name('admin.content');
         Route::view('comment', 'cmsx::admin.nocontent')->name('admin.comment');
         Route::view('file', 'cmsx::admin.nocontent')->name('admin.file');
@@ -52,6 +53,7 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::get('page/{id}-{slug}', 'C18app\Cmsx\Controllers\CmsController@page')->name('cms.page');
+    Route::get('article/{id}-{slug}', 'C18app\Cmsx\Controllers\CmsController@article')->name('cms.article');
 
     Route::get('/', 'C18app\Cmsx\Controllers\CmsController@index')->name('homepage');
 });

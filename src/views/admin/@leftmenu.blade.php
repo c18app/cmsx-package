@@ -2,8 +2,11 @@
     <li class="{{ Request()->route()->named('pages.*') ? ' active' : '' }}">
         <a href="{{ route('pages.index') }}"><span class="fas fa-file-alt"></span>&nbsp;&nbsp;Pages</a>
     </li>
-    <li class="{{ Request()->route()->named('admin.article') ? ' active' : '' }}">
-        <a href="{{ route('admin.article') }}" class="text-muted"><span class="far fa-file-alt"></span>&nbsp;&nbsp;Articles</a>
+    <li class="{{ Request()->route()->named('articles.*') ? ' active' : '' }}">
+        <a href="{{ route('articles.index') }}"><span class="far fa-file-alt"></span>&nbsp;&nbsp;Articles</a>
+    </li>
+    <li class="{{ Request()->route()->named('admin.tweets') ? ' active' : '' }}">
+        <a href="{{ route('admin.tweets') }}" class="text-muted"><span class="fab fa-twitter"></span>&nbsp;&nbsp;Tweets</a>
     </li>
     <li class="{{ Request()->route()->named('admin.content') ? ' active' : '' }}">
         <a href="{{ route('admin.content') }}" class="text-muted"><span class="fas fa-th"></span>&nbsp;&nbsp;Content</a>

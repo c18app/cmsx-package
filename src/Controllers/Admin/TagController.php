@@ -50,6 +50,7 @@ class TagController extends Controller
     {
         if($request->hash==sha1('hash-delete-tag-id-'.$tag->id)) {
             $tag->pages()->detach();
+            $tag->articles()->detach();
             $tag->delete();
         } else {
             $request->session()->flash('error', 'bad token!');

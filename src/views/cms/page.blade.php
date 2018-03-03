@@ -1,6 +1,6 @@
 @extends('cmsx::layouts.frontend')
 
-@section('title', $page->title)
+@section('title', ' - ' . $page->title)
 
 @section('content')
     <h1>{{ $page->title }}</h1>

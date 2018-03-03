@@ -56,5 +56,32 @@
                     @endforeach
                 </table>
             </div>
+        </div>
+    @endif
+
+    @if($tag->articles()->count()>0)
+        <div class="row">
+            <div class="col-lg-12">
+                Uses in Articles
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table">
+                    @foreach($tag->articles as $v)
+                        <tr>
+                            <td>{{ $v->id }}</td>
+                            <td>{{ $v->title }}</td>
+                            <td class="text-right">
+                                <a href="{{ route('articles.edit', ['page'=>$v]) }}" class="btn btn-warning btn-xs"
+                                   role="button"><span class="fas fa-pencil-alt"></span> Edit</a>
+                                <a href="{{ route('articles.show', ['page'=>$v]) }}" class="btn btn-info btn-xs"
+                                   role="button"><span class="fas fa-search"></span> Detail</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
+        </div>
     @endif
 @endsection

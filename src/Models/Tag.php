@@ -19,4 +19,9 @@ class Tag extends Model
     {
         return $this->morphedByMany('C18app\Cmsx\Models\Page', 'taggable', $this->table_prefix . 'taggables');
     }
+
+    public function articles()
+    {
+        return $this->morphedByMany('C18app\Cmsx\Models\Article', 'taggable', $this->table_prefix . 'taggables');
+    }
 }

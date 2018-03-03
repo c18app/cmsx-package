@@ -65,7 +65,7 @@ class PageController extends Controller
         $tags_new = collect(explode(',', $request->input('tags')));
         $tags_list = Tag::all();
         foreach ($tags_new as $item) {
-            if (!$tags_list->where('title', $item)->count()) {
+            if (trim($item) != '' && !$tags_list->where('title', $item)->count()) {
                 Tag::create(['title' => $item]);
             }
         }
