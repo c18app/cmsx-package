@@ -9,7 +9,7 @@
     </div>
     <div class="form-group">
         <label for="content">Content</label>
-        <textarea class="form-control" id="content" name="content">{{ old('content', $page->content) }}</textarea>
+        <textarea class="form-control" id="content" name="content">{!! old('content', $page->content) !!}</textarea>
     </div>
     <div class="form-group">
         <label for="tags">Tags</label>
