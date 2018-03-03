@@ -23,11 +23,18 @@ class ServiceProvider extends SP
         $this->loadViewsFrom(__DIR__.'/views', 'cmsx');
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
 
+        // publishes
         $this->publishes([
-            __DIR__.'/assets' => public_path('vendor/c18app/cmsx'),
-            __DIR__.'/views' => resource_path('views/vendor/cmsx'),
-            __DIR__.'/config/cmsx.php' => config_path('cmsx.php'),
+            __DIR__.'/assets' => public_path('vendor/c18app/cmsx')
         ], 'c18app_cmsx');
+
+        $this->publishes([
+            __DIR__.'/config/cmsx.php' => config_path('cmsx.php')
+        ], 'c18app_cmsx-config');
+
+        $this->publishes([
+            __DIR__.'/views' => resource_path('views/vendor/cmsx')
+        ], 'c18app_cmsx-views');
     }
 
     /**

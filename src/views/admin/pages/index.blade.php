@@ -10,7 +10,7 @@
     <div class="clearfix">&nbsp;</div>
     <div class="row">
         <div class="col-lg-12">
-            <table class="table" id="sortable">
+            <table class="table">
                 @foreach($pages as $v)
                     <tr data-order="{{ $v->order }}" data-id="{{ $v->id }}" class="{{ $v->id>0 ? 'sortable' : '' }}">
                         <td class="{{ $v->id>0 ? 'handle' : '' }}" style="position: relative;">
@@ -39,6 +39,20 @@
         </div>
     </div>
 
-    @include('cmsx::admin.@sortablejs', ['type'=>'Page'])
-    @include('cmsx::admin.@confirmjs')
+    <script>
+        $("table").sortable({
+            items: "tr.sortable",
+            handle: ".handle div.drag",
+            appendTo: "parent",
+            helper: "clone",
+            update: function (event, ui) {
+                var ids = [];
+                var i = 0;
+                $('table tr.sortable').each(function () {
+                    ids[i++] = $(this).data('id');
+                })
+                $.post('{{ route('admin.sort', ['type'=>'Page']) }}', {'ids': ids, '_token': '{{ csrf_token() }}'});
+            }
+        }).disableSelection();
+    </script>
 @endsection

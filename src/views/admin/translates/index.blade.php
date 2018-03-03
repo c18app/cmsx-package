@@ -35,6 +35,4 @@
             </table>
         </div>
     </div>
-
-    @include('cmsx::admin.@confirmjs')
 @endsection

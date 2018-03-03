@@ -10,7 +10,7 @@
     <div class="clearfix">&nbsp;</div>
     <div class="row">
         <div class="col-lg-12">
-            <table class="table" id="sortable">
+            <table class="table">
                 @foreach($tags as $v)
                     <tr>
                         <td>{{ $v->id }}</td>
@@ -43,6 +43,4 @@
             </table>
         </div>
     </div>
-
-    @include('cmsx::admin.@confirmjs')
 @endsection

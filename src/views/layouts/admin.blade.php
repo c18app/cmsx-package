@@ -15,13 +15,14 @@
     <script src="/vendor/c18app/cmsx/jquery/ui/1.12.1/jquery-ui.min.js"></script>
 
     <link rel="stylesheet" href="/vendor/c18app/cmsx/css/backend/app.css">
+    <script src="/vendor/c18app/cmsx/js/backend/app.js"></script>
 </head>
 <body class="admin">
-@include('cmsx::admin.menu.top')
+@include('cmsx::admin.@topmenu')
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-2 sidebar">
-            @include('cmsx::admin.menu.left')
+            @include('cmsx::admin.@leftmenu')
         </div>
 
         <div class="col-lg-10 col-lg-offset-2">
