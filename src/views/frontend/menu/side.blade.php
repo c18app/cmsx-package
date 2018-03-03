@@ -1,3 +1,3 @@
 <ul class="side-nav">
-    @include('cmsx::components.leftmenu')
+    @includeFirst(['cmsx::custom.components.leftmenu', 'cmsx::components.leftmenu'])
 </ul>

@@ -12,12 +12,7 @@
     <script src="/js/app.js"></script>
 
     <link rel="stylesheet" href="/vendor/c18app/cmsx/css/frontend/app.css">
-    <?php
-        $header_html = \C18app\Cmsx\Models\Translate::where('title', 'html_header')->first();
-    ?>
-    @isset($header_html)
-        {!! $header_html->content !!}
-    @endisset
+    @includeIf('cmsx::custom.frontend.layout.header')
 </head>
 <body class="frontend">
 @include('cmsx::frontend.menu.top')
