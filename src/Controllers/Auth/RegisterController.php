@@ -70,7 +70,8 @@ class RegisterController extends Controller
         ]);
 
         if(User::all()->count()==1) {
-            $user->roles()->attach(Role::where('name', 'admin')->first());
+            $admin_role = Role::firstOrCreate(['name' => 'admin']);
+            $user->roles()->attach($admin_role);
         }
 
         return $user;
