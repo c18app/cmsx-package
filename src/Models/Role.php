@@ -2,12 +2,12 @@
 
 namespace C18app\Cmsx\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use C18app\Cmsx\Models\Base as Model;
 
 class Role extends Model
 {
     public function users()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User', $this->table_prefix.'role_user')->withTimestamps();
     }
 }
