@@ -17,7 +17,7 @@
     min-height: 800px;
 }
 
-#bottom-content .container-fluid {
+#bottom-content .container {
     height: 50px;
     line-height: 50px;
 }
