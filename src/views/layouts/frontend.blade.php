@@ -16,7 +16,7 @@
 </head>
 <body class="frontend">
 @include('cmsx::frontend.menu.top')
-<div class="container">
+<div class="container" id="main-content">
     <div class="row">
         <div class="col-lg-2">
             @include('cmsx::frontend.menu.side')
@@ -26,5 +26,6 @@
         </div>
     </div>
 </div>
+@include('cmsx::frontend.menu.bottom')
 </body>
 </html>

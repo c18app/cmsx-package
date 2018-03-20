@@ -12,3 +12,20 @@
 .side-nav .item {
     padding-left: 10px;
 }
+
+#main-content {
+    min-height: 800px;
+}
+
+#bottom-content .container-fluid {
+    height: 50px;
+    line-height: 50px;
+}
+
+#bottom-content hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+    background-color: #d3e0e9;
+    height: 1px;
+}

@@ -1,3 +1,3 @@
-<ul class="side-nav">
-    @includeFirst(['cmsx::custom.components.topmenu', 'cmsx::components.topmenu'])
-</ul>
+<div id="top-content">
+@includeFirst(['cmsx::custom.components.topmenu', 'cmsx::components.topmenu'])
+</div>
