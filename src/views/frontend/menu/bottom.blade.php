@@ -8,7 +8,6 @@
     var bh = $('#bottom-content').outerHeight(true);
     var mhx = $('#top-content').outerHeight(true) -  $('#top-content').height();
     var mh = wh - th - bh - mhx;
-    console.log(mh)
 
     $('#main-content').css('minHeight', mh);
 </script>
