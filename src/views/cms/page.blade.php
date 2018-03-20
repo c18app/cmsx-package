@@ -4,6 +4,6 @@
 
 @section('content')
     <h1>{{ $page->title }}</h1>
-    {!! nl2br($page->content) !!}
+    {!! $page->formatedContent !!}
 @endsection
 
