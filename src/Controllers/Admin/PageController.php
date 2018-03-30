@@ -20,12 +20,12 @@ class PageController extends Controller
 
     public function index()
     {
-        return view('cmsx::admin.pages.index', ['pages' => Page::orderBy('order', 'asc')->get()]);
+        return view(Config('cmsx.app.template-admin').'::pages.index', ['pages' => Page::orderBy('order', 'asc')->get()]);
     }
 
     public function create()
     {
-        return view('cmsx::admin.pages.create', ['page' => new Page()]);
+        return view(Config('cmsx.app.template-admin').'::pages.create', ['page' => new Page()]);
     }
 
     public function store(StorePagePost $request)
@@ -38,12 +38,12 @@ class PageController extends Controller
 
     public function show(Page $page)
     {
-        return view('cmsx::admin.pages.show', ['page' => $page]);
+        return view(Config('cmsx.app.template-admin').'::pages.show', ['page' => $page]);
     }
 
     public function edit(Page $page)
     {
-        return view('cmsx::admin.pages.edit', ['page' => $page]);
+        return view(Config('cmsx.app.template-admin').'::pages.edit', ['page' => $page]);
     }
 
     public function update(StorePagePost $request, Page $page)

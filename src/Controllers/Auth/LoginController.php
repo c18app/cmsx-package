@@ -39,6 +39,6 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('cmsx::auth.login');
+        return view(Config('cmsx.app.template').'::auth.login');
     }
 }

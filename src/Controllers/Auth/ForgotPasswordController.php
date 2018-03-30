@@ -33,12 +33,12 @@ class ForgotPasswordController extends Controller
 
     public function showLinkRequestForm()
     {
-        return view('cmsx::auth.passwords.email');
+        return view(Config('cmsx.app.template').'::auth.passwords.email');
     }
 
     public function showResetForm(Request $request, $token = null)
     {
-        return view('cmsx::auth.passwords.reset')->with(
+        return view(Config('cmsx.app.template').'::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }

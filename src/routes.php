@@ -1,4 +1,5 @@
 <?php
+
 Route::group(['middleware' => ['web']], function () {
     Route::get('storage/{folder}/{filename}', function ($folder, $filename) {
         $path = storage_path() . '/app/public/' . $folder . '/' . $filename;
@@ -39,17 +40,16 @@ Route::group(['middleware' => ['web']], function () {
         ]);
 
         Route::post('{type}/sort', 'C18app\Cmsx\Controllers\Admin\AdminController@sort')->name('admin.sort');
-
-        Route::view('tweet', 'cmsx::admin.nocontent')->name('admin.tweets');
-        Route::view('content', 'cmsx::admin.nocontent')->name('admin.content');
-        Route::view('comment', 'cmsx::admin.nocontent')->name('admin.comment');
-        Route::view('file', 'cmsx::admin.nocontent')->name('admin.file');
-        Route::view('gallery', 'cmsx::admin.nocontent')->name('admin.gallery');
-        Route::view('category', 'cmsx::admin.nocontent')->name('admin.category');
-        Route::view('menu', 'cmsx::admin.nocontent')->name('admin.menu');
-        Route::view('user', 'cmsx::admin.nocontent')->name('admin.user');
-        Route::view('maillist', 'cmsx::admin.nocontent')->name('admin.maillist');
-        Route::view('settings', 'cmsx::admin.nocontent')->name('admin.setting');
+        Route::view('tweet', Config('cmsx.app.template-admin').'::nocontent')->name('admin.tweets');
+        Route::view('content', Config('cmsx.app.template-admin').'::nocontent')->name('admin.content');
+        Route::view('comment', Config('cmsx.app.template-admin').'::nocontent')->name('admin.comment');
+        Route::view('file', Config('cmsx.app.template-admin').'::nocontent')->name('admin.file');
+        Route::view('gallery', Config('cmsx.app.template-admin').'::nocontent')->name('admin.gallery');
+        Route::view('category', Config('cmsx.app.template-admin').'::nocontent')->name('admin.category');
+        Route::view('menu', Config('cmsx.app.template-admin').'::nocontent')->name('admin.menu');
+        Route::view('user', Config('cmsx.app.template-admin').'::nocontent')->name('admin.user');
+        Route::view('maillist', Config('cmsx.app.template-admin').'::nocontent')->name('admin.maillist');
+        Route::view('settings', Config('cmsx.app.template-admin').'::nocontent')->name('admin.setting');
     });
 
     Route::get('page/{id}-{slug}', 'C18app\Cmsx\Controllers\CmsController@page')->name('cms.page');

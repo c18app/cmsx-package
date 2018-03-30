@@ -19,12 +19,12 @@ class TranslateController extends Controller
 
     public function index()
     {
-        return view('cmsx::admin.translates.index', ['translates' => Translate::orderBy('title', 'asc')->get()]);
+        return view(Config('cmsx.app.template-admin').'::translates.index', ['translates' => Translate::orderBy('title', 'asc')->get()]);
     }
 
     public function create()
     {
-        return view('cmsx::admin.translates.create', ['translate' => new Translate()]);
+        return view(Config('cmsx.app.template-admin').'::translates.create', ['translate' => new Translate()]);
     }
 
     public function store(StoreTranslatePost $request)
@@ -35,12 +35,12 @@ class TranslateController extends Controller
 
     public function show(Translate $translate)
     {
-        return view('cmsx::admin.translates.show', ['translate' => $translate]);
+        return view(Config('cmsx.app.template-admin').'::translates.show', ['translate' => $translate]);
     }
 
     public function edit(Translate $translate)
     {
-        return view('cmsx::admin.translates.edit', ['translate' => $translate]);
+        return view(Config('cmsx.app.template-admin').'::translates.edit', ['translate' => $translate]);
     }
 
     public function update(StoreTranslatePost $request, Translate $translate)

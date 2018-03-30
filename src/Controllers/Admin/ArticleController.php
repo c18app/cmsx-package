@@ -20,12 +20,12 @@ class ArticleController extends Controller
 
     public function index()
     {
-        return view('cmsx::admin.articles.index', ['articles' => Article::orderBy('order', 'asc')->get()]);
+        return view(Config('cmsx.app.template-admin').'::articles.index', ['articles' => Article::orderBy('order', 'asc')->get()]);
     }
 
     public function create()
     {
-        return view('cmsx::admin.articles.create', ['article' => new Article()]);
+        return view(Config('cmsx.app.template-admin').'::articles.create', ['article' => new Article()]);
     }
 
     public function store(StoreArticlePost $request)
@@ -38,12 +38,12 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-        return view('cmsx::admin.articles.show', ['article' => $article]);
+        return view(Config('cmsx.app.template-admin').'::articles.show', ['article' => $article]);
     }
 
     public function edit(Article $article)
     {
-        return view('cmsx::admin.articles.edit', ['article' => $article]);
+        return view(Config('cmsx.app.template-admin').'::articles.edit', ['article' => $article]);
     }
 
     public function update(StoreArticlePost $request, Article $article)

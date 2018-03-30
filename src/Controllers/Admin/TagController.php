@@ -19,12 +19,12 @@ class TagController extends Controller
 
     public function index()
     {
-        return view('cmsx::admin.tags.index', ['tags' => Tag::orderBy('title', 'asc')->get()]);
+        return view(Config('cmsx.app.template-admin').'::tags.index', ['tags' => Tag::orderBy('title', 'asc')->get()]);
     }
 
     public function create()
     {
-        return view('cmsx::admin.tags.create', ['tag' => new Tag()]);
+        return view(Config('cmsx.app.template-admin').'::tags.create', ['tag' => new Tag()]);
     }
 
     public function store(StoreTagPost $request)
@@ -35,12 +35,12 @@ class TagController extends Controller
 
     public function show(Tag $tag)
     {
-        return view('cmsx::admin.tags.show', ['tag' => $tag]);
+        return view(Config('cmsx.app.template-admin').'::tags.show', ['tag' => $tag]);
     }
 
     public function edit(Tag $tag)
     {
-        return view('cmsx::admin.tags.edit', ['tag' => $tag]);
+        return view(Config('cmsx.app.template-admin').'::tags.edit', ['tag' => $tag]);
     }
 
     public function update(StoreTagPost $request, Tag $tag)

@@ -79,6 +79,6 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('cmsx::auth.register');
+        return view(Config('cmsx.app.template').'::auth.register');
     }
 }

@@ -40,7 +40,7 @@ class ResetPasswordController extends Controller
 
     public function showResetForm(Request $request, $token = null)
     {
-        return view('cmsx::auth.passwords.reset')->with(
+        return view(Config('cmsx.app.template').'::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }

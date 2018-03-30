@@ -4,6 +4,7 @@ namespace C18app\Cmsx\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Config;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        return view('cmsx::admin.dashboard');
+        return view(Config('cmsx.app.template-admin').'::dashboard');
     }
 
     public function sort(Request $request, $type)

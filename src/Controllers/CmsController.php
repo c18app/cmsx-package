@@ -10,14 +10,14 @@ use C18app\Cmsx\Models\Article;
 class CmsController extends Controller
 {
     public function index() {
-        return view('cmsx::frontend.homepage', ['pages' => Page::orderBy('id', 'desc')->get()]);
+        return view(Config('cmsx.app.template').'::frontend.homepage', ['pages' => Page::orderBy('id', 'desc')->get()]);
     }
 
     public function page($id)
     {
         $page = Page::findOrFail($id);
         $page->formatedContent = $this->prepareContent($page->content);
-        return view('cmsx::cms.page', ['page' => $page]);
+        return view(Config('cmsx.app.template').'::cms.page', ['page' => $page]);
     }
 
     public function article($id)
@@ -25,7 +25,7 @@ class CmsController extends Controller
         $article = Article::findOrFail($id);
         $article->formatedContent = $this->prepareContent($article->content);
 
-        return view('cmsx::cms.article', ['article' => $article]);
+        return view(Config('cmsx.app.template').'::cms.article', ['article' => $article]);
     }
 
     private function prepareContent($content) {

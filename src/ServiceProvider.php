@@ -20,7 +20,8 @@ class ServiceProvider extends SP
             __DIR__.'/config/cmsx.php', 'cmsx'
         );
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-        $this->loadViewsFrom(__DIR__.'/views', 'cmsx');
+        $this->loadViewsFrom(__DIR__.'/views/templates/default', 'cmsx-templates-default');
+        $this->loadViewsFrom(__DIR__.'/views/templates-admin/default', 'cmsx-templates-admin-default');
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
 
         // publishes
@@ -33,8 +34,12 @@ class ServiceProvider extends SP
         ], 'c18app_cmsx-config');
 
         $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/cmsx')
-        ], 'c18app_cmsx-views');
+            __DIR__.'/views-custom' => resource_path('views/vendor/cmsx/templates/default/customizable')
+        ], 'c18app_cmsx-templates-default-custom');
+
+        $this->publishes([
+            __DIR__.'/views/templates/default' => resource_path('views/vendor/cmsx/templates/default')
+        ], 'c18app_cmsx-templates-default');
     }
 
     /**
