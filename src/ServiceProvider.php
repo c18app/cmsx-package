@@ -34,7 +34,7 @@ class ServiceProvider extends SP
         ], 'c18app_cmsx-config');
 
         $this->publishes([
-            __DIR__.'/views-custom' => resource_path('views/vendor/cmsx/templates/default/customizable')
+            __DIR__.'/views/templates/default/customizable' => resource_path('views/vendor/cmsx/templates/default/customizable')
         ], 'c18app_cmsx-templates-default-custom');
 
         $this->publishes([
