@@ -12,7 +12,7 @@
     <script src="/js/app.js"></script>
 
     <link rel="stylesheet" href="/vendor/c18app/cmsx/css/frontend/app.css">
-    @includeIf(Config('cmsx.app.template-custom').'::header')
+    @includeIf(Config('cmsx.app.template-custom').'header')
 </head>
 <body class="frontend">
 @include(Config('cmsx.app.template').'::frontend.menu.top')

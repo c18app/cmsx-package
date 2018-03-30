@@ -1,5 +1,5 @@
 <div id="bottom-content">
-@includeFirst([Config('cmsx.app.template-custom').'::bottommenu', Config('cmsx.app.template').'::customizable.bottommenu'])
+@includeFirst([Config('cmsx.app.template-custom').'bottommenu', Config('cmsx.app.template').'::customizable.bottommenu'])
 </div>
 
 <script>
