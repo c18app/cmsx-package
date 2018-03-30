@@ -16,7 +16,7 @@
 </head>
 <body class="frontend">
 @include(Config('cmsx.app.template').'::frontend.menu.top')
-<div class="container" id="main-content">
+<div class="@yield('content-container', 'container')" id="main-content">
     <div class="row">
         <div class="col-lg-2">
             @include(Config('cmsx.app.template').'::frontend.menu.side')
