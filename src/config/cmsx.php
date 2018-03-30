@@ -6,6 +6,6 @@ return [
         'name' => 'CmsX',
         'template' => 'cmsx-templates-default',
         'template-admin' => 'cmsx-templates-admin-default',
-        'template-custom' => 'vendor.cmsx.templates.default-custom.'
+        'template-custom' => 'vendor.cmsx.templates.default.customizable.'
     ]
 ];
