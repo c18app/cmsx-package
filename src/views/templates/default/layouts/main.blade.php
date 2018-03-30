@@ -14,18 +14,5 @@
     <link rel="stylesheet" href="/vendor/c18app/cmsx/css/frontend/app.css">
     @includeIf(Config('cmsx.app.template-custom').'header')
 </head>
-<body class="frontend">
-@include(Config('cmsx.app.template').'::frontend.menu.top')
-<div class="@yield('content-container', 'container')" id="main-content">
-    <div class="row">
-        <div class="col-lg-2">
-            @include(Config('cmsx.app.template').'::frontend.menu.side')
-        </div>
-        <div class="col-lg-10">
-            @yield('content')
-        </div>
-    </div>
-</div>
-@include(Config('cmsx.app.template').'::frontend.menu.bottom')
-</body>
+@includeFirst([Config('cmsx.app.template-custom').'maincontent', Config('cmsx.app.template').'::customizable.maincontent'])
 </html>
