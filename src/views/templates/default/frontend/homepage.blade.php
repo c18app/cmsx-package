@@ -1,5 +1,1 @@
-@extends(Config('cmsx.app.template').'::layouts.main')
-
-@section('content')
-    <h1>homepage</h1>
-@endsection
+@includeFirst([Config('cmsx.app.template-custom').'homepage', Config('cmsx.app.template').'::customizable.homepage'])
