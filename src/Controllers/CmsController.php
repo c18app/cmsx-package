@@ -29,11 +29,21 @@ class CmsController extends Controller
     }
 
     private function prepareContent($content) {
-        $temp = preg_split("/\R/", $content);
+        $temp = preg_split('/\R/', trim($content));
 
         $result = [];
-        foreach($temp as $item) {
-            $result[] = '<p>'.(strlen(trim($item))?trim($item):'&nbsp;').'</p>';
+        $break_lines = 0;
+        foreach($temp as $k => $item) {
+            if(strlen(trim($item))) {
+                $break_lines = 0;
+                $result[] = '<p>'.trim($item).'</p>';
+            } else {
+                $break_lines++;
+                if($break_lines < 2) {
+                    continue;
+                }
+                $result[] = '<p class="empty-paragraph">&nbsp;</p>';
+            }
         }
 
         $result = implode("\n", $result);

@@ -29,3 +29,7 @@
     background-color: #d3e0e9;
     height: 1px;
 }
+
+.frontend #main-content p.empty-paragraph {
+    margin-bottom: 0;
+}
