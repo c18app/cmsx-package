@@ -36,7 +36,12 @@ class CmsController extends Controller
         foreach($temp as $k => $item) {
             if(strlen(trim($item))) {
                 $break_lines = 0;
-                $result[] = '<p>'.trim($item).'</p>';
+                if(substr(trim($item), 0, 1) == '<' && substr(trim($item), -1) == '>') {
+                    $result[] = trim($item);
+                } else {
+                    $result[] = '<p>'.trim($item).'</p>';
+                }
+
             } else {
                 $break_lines++;
                 if($break_lines < 2) {
