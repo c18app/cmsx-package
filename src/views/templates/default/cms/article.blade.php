@@ -2,8 +2,9 @@
 
 @section('title', ' - ' . $article->title)
 
+@section('page-title', $article->title)
+
 @section('content')
-    <h1>{{ $article->title }}</h1>
     {!! $article->formatedContent !!}
 @endsection
 
