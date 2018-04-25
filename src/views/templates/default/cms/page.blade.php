@@ -1,4 +1,4 @@
-@extends(Config('cmsx.app.template').'::layouts.main', ['content-type' => 'page', 'content-data' => $page])
+@extends(Config('cmsx.app.template').'::layouts.main', ['contentType' => 'page', 'contentData' => $page])
 
 @section('title', ' - ' . $page->title)
 
