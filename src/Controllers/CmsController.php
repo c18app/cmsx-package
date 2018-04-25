@@ -29,11 +29,11 @@ class CmsController extends Controller
     }
 
     private function prepareContent($content) {
-        $temp = preg_split("/\R\R/", $content);
+        $temp = preg_split("/\R/", $content);
 
         $result = [];
         foreach($temp as $item) {
-            $result[] = '<p>'.nl2br(trim($item)).'</p>';
+            $result[] = '<p>'.(strlen(trim($item))?trim($item):'&nbsp;').'</p>';
         }
 
         $result = implode("\n", $result);
